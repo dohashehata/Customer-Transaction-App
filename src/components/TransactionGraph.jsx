@@ -18,6 +18,16 @@ const TransactionGraph = ({ transactions }) => {
   }));
 
   return (
+      
+    <Grid
+                    container
+                    spacing={2}
+                    direction="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    style={{ minHeight: '100vh' }}
+                >
+                    <Grid item xs={12} sm={8} md={6}></Grid>
     <div style={{ background: '#121212', padding: '20px', borderRadius: '10px' }}>
       <h2 style={{ color: '#fff', textAlign: 'center' }}>Area Chart</h2>
       <ResponsiveContainer width="100%" height={400}>
@@ -44,6 +54,7 @@ const TransactionGraph = ({ transactions }) => {
         </AreaChart>
       </ResponsiveContainer>
     </div>
+    </Grid>
   );
 };
 

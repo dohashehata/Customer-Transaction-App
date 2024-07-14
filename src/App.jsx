@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
-import { Box, Paper } from '@mui/material';
+import { Box, Grid, Paper } from '@mui/material';
 import { styled } from '@mui/system';
 import CustomerTableSearch from './components/CustomerTableSearch.jsx';
 import SearchComponent from './components/SearchComponent.jsx';
@@ -70,7 +70,16 @@ const App = () => {
   );
 
   return (
-    <>
+  
+    <Grid
+                    container
+                    spacing={2}
+                    direction="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    style={{ minHeight: '100vh' }}
+                >
+                    <Grid item xs={12} sm={8} md={6}></Grid>
       {loading ? <LoadingSpinner /> : (
         <MainContainer>
           <h1>Customer Management System</h1>
@@ -100,7 +109,7 @@ const App = () => {
           </ContentContainer>
         </MainContainer>
       )}
-    </>
+ </Grid>
   );
 };
 

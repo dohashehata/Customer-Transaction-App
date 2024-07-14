@@ -15,6 +15,15 @@ const style = {
 
 const CustomerModal = ({ open, onClose, customerName, setCustomerName, onSave }) => {
   return (
+    <Grid
+    container
+    spacing={2}
+    direction="column"
+    alignItems="center"
+    justifyContent="center"
+    style={{ minHeight: '100vh' }}
+>
+    <Grid item xs={12} sm={8} md={6}></Grid>
     <Modal open={open} onClose={onClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description">
       <Box sx={style}>
         <h2 id="modal-modal-title">Update Customer</h2>
@@ -31,6 +40,8 @@ const CustomerModal = ({ open, onClose, customerName, setCustomerName, onSave })
         </Button>
       </Box>
     </Modal>
+    
+    </Grid>
   );
 };
 

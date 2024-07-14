@@ -49,7 +49,16 @@ const SearchComponent = ({ onFiltersChange }) => {
   };
 
   return (
-    <div>
+      
+    <Grid
+                    container
+                    spacing={2}
+                    direction="column"
+                    alignItems="center"
+                    justifyContent="center"
+                    style={{ minHeight: '100vh' }}
+                >
+                    <Grid item xs={12} sm={8} md={6}></Grid>
       <CustomTextField
         variant="outlined"
         value={searchString}
@@ -69,7 +78,7 @@ const SearchComponent = ({ onFiltersChange }) => {
           margin: '20px 0',
         }}
       />
-    </div>
+    </Grid>
   );
 };
 
